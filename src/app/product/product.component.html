@@ -1,0 +1,24 @@
+
+
+<div class="row"> </div>
+
+<div class="row" style="margin: auto; width: 40%;   padding: 100px;">
+<mat-grid-list cols="4" rowHeight="300px"  gutterSize="30px">
+    <mat-grid-tile  *ngFor="let product of products">
+        <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>{{product.productName}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image [src]="product.imageUrl" [border]="2" [width]="50" [height]="100">
+            <mat-card-content>
+              <p>
+                Prix : {{product.price}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>Plus de détail ...</button>
+            </mat-card-actions>
+          </mat-card>    </mat-grid-tile>
+    </mat-grid-list>
+</div>

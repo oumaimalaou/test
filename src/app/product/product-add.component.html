@@ -1,0 +1,37 @@
+<div class="row">
+<mat-card class="example-card" >
+    <mat-card-header >
+       <h3 style="margin: auto; padding: 40; "> Add new product </h3>
+    </mat-card-header>
+    <mat-card-content>
+        <form  (ngSubmit)="save()" [formGroup]="productForm" class="example-form">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Product Name</mat-label>
+                    <input matInput type="text" class="form-control"  formControlName="productName"  />
+                    
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Product Code</mat-label>
+                    <input matInput class="form-control" type="text"  placeholder="Ex. az-745"  formControlName="productCode"
+                     />
+                   
+                  </mat-form-field>
+            
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Price</mat-label>
+                    <input matInput type="number" class="form-control"   formControlName="price"
+                     />
+                  
+                  </mat-form-field> 
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Picture</mat-label>
+                    <input  type="file" class="form-control"   formControlName="imageUrl" (change)="handleFileInput($event.target.files)"
+                     />
+                  
+                  </mat-form-field> 
+                  <button mat-raised-button type="submit" color="accent">Accent</button>
+
+        </form>
+    </mat-card-content>
+</mat-card>
+</div>
